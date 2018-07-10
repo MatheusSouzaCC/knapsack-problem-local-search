@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h3>Problema da mochila - busca local</h3>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="arquivo">Arquivo de instância</label>
+                    <input id="arquivo" type="file" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <button id="iniciar" class="btn btn-primary">
+                    <i class="glyphicon glyphicon-start"></i> Iniciar busca local
+                </button>
+                <br>
+                <span><b>Status: </b><span id="status">Parado</span></span>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>
+                    <i class="glyphicon glyphicon-certificate"></i>Ótimo local:
+                    <span id="otimoLocal"></span>
+                </h4>
+            </div>
+            <div class="col-sm-6">
+                <h4>
+                    <i class="glyphicon glyphicon-hourglass"></i> Tempo decorrido:
+                    <span id="tempoDecorrido"></span>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <h3>
+                <i class="glyphicon glyphicon-time"></i> Histórico de soluções
+                <a id="salvar" class="btn btn-success">Salvar</a>
+            </h3>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Quantidade de itens</th>
+                            <th>Valor total</th>
+                            <th>Peso total</th>
+                            <th>Tempo Decorrido</th>
+                            <th>Número de itens da instância</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-historico"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- jquery js -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<!-- bootstrap js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+<script src="util.js"></script>
+<script src="buscaLocal.js"></script>
+
+</html>
