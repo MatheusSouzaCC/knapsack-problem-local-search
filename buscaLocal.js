@@ -11,7 +11,7 @@ function executarBuscaLocal(instancia) {
     }
 }
 
-
+//solucao totalmente aleatoria ruim, de no maximo 10 itens
 function pegarSolucaoAleatoria(instancia) {
     var rand = parseInt(Math.random() * 10);
     var s = {
@@ -33,3 +33,25 @@ function pegarSolucaoAleatoria(instancia) {
 
     return s;
 }
+
+//solucao aleatoria que tenta preencher a mochila
+//geralmente resulta em uma solução boa que provavelmente ja é um otimo local
+// function pegarSolucaoAleatoria(instancia) {
+//     var s = {
+//       itens: [],
+//       pesoTotal: 0,
+//       valorTotal: 0
+//     };
+//     var pesoTotalAux = 0;
+//     while (pesoTotalAux < instancia.capacidadeMochila) {
+//       let index = parseInt(Math.random() * 10);
+//       let item = instancia.itens[index];
+//       if (s.pesoTotal + item.peso <= instancia.capacidadeMochila) {
+//         s.itens.push(item);
+//         s.pesoTotal += item.peso;
+//         s.valorTotal += item.valor;
+//       }
+//       pesoTotalAux += item.peso;
+//     }
+//     return s;
+//   }
